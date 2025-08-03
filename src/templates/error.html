@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Error! Code: {{ code }}{% endblock %}
+
+{% block main %}
+    <section style="text-align: center;">
+		<h1>{{ code }}</h1>
+	</section>
+    <section style="text-align: center;">
+		<h4>{{ reason }}</h4>
+	</section>
+{% endblock %}

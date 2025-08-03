@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pip{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	{# Pico CSS https://picocss.com/ #}
+	<link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css"
+    />
+	<link
+	  rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"
+	>
+	{% block head %}{% endblock %}
+</head>
+
+<body>
+	<main class="container-fluid" style="padding-top: 40px">
+		{% block main %}{% endblock %}
+	</main>
+</body>
+
+</html>
