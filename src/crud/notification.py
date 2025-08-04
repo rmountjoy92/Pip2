@@ -2,12 +2,17 @@ from typing import List
 
 from sqlalchemy.orm import Session
 
-from src.crud.base import CRUDBase
+from src.crud.base import CRUDBase, CreateSchemaType, ModelType
 from src.models.notification import Notification
 from src.schemas import NotificationCreate, NotificationUpdate
 
 
 class CRUDNotification(CRUDBase[Notification, NotificationCreate, NotificationUpdate]):
+    def create(self, db: Session, *, obj_in: NotificationCreate) -> ModelType:
+        if not obj_in.emoji:
+            obj_in.emoji = "✅"
+        return super().create(db, obj_in=obj_in)
+
     def get_multi(
         self,
         db: Session,

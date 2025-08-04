@@ -337,6 +337,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-/backend/data
-/backend/src/static/audio/voice-clips
-/backend/.cache.sqlite
+/data
+/src/static/audio/response.wav
+.cache.sqlite
